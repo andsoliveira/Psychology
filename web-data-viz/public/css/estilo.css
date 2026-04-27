@@ -170,106 +170,176 @@ body {
   font-size: 12px;
 }
 
-/* LOGIN */
+/* LOGIN E CADASTRO */
+
+.pagina-login {
+  background-image:
+    linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.72)),
+    url('../assets/imgs/rafael.png');
+}
+
+.pagina-cadastro {
+  background-image:
+    linear-gradient(rgba(0,0,0,0.60), rgba(0,0,0,0.75)),
+    url('../assets/imgs/tainanalpra.png');
+}
+
+.pagina-login,
+.pagina-cadastro {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
 
 .login {
-  height: var(--tamanho-login);
+  height: calc(100vh - var(--tamanho-header));
   background: transparent;
 }
 
 .login .container {
+  height: 100%;
   justify-content: center;
   align-items: center;
-  height: 100%;
 }
 
 .card {
-  width: 50%;
-  background-color: transparent;
-  border-radius: 10px;
+  width: 420px;
+  padding: 32px;
+  border-radius: 22px;
+
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(1px);
+
+  color: #fff;
+  box-shadow: 0 10px 35px rgba(0,0,0,0.5);
+
   display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  color: palevioletred;
   flex-direction: column;
-  height: fit-content;
-  padding: 20px 0;
+  align-items: center;
+}
+
+.card-login {
+  min-height: 360px;
+}
+
+.card-cadastro {
+  width: 440px;
+  padding: 24px 32px;
 }
 
 .card h2 {
-  margin: 0;
-  font-size: 30px;
+  width: 100%;
+  margin: 0 0 25px 0;
+
+  color: #fff;
+  font-size: 38px;
+  text-align: left;
+}
+
+.card-cadastro h2 {
+  font-size: 32px;
+  margin-bottom: 18px;
 }
 
 .formulario {
+  width: 100%;
   display: flex;
-  height: 90%;
-  width: 80%;
-  justify-content: space-around;
   flex-direction: column;
+  gap: 18px;
 }
 
-.formulario span {
-  font-size: 15px;
-  font-weight: 800;
-}
-
-.formulario input {
-  border: 2px solid #32b9cd;
-  text-align: center;
-  border-radius: 10px;
-  margin: 0;
-}
-
-.formulario select {
-  border: 2px solid #32b9cd;
-  background-color: white;
-  color: gray;
-  height: 36px;
-  text-align: center;
-  border-radius: 10px;
-  margin: 0;
+.card-cadastro .formulario {
+  gap: 12px;
 }
 
 .campo {
+  position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: start;
-  padding: 5px 0;
+  padding: 0;
+}
+
+.campo span {
+  position: absolute;
+  top: -9px;
+  left: 14px;
+
+  padding: 0 8px;
+
+  color: #fff;
+  font-size: 13px;
+  font-weight: 500;
+  z-index: 2;
+}
+
+.formulario input {
+  width: 100%;
+  height: 48px;
+
+  margin: 0;
+  padding: 0 14px;
+  box-sizing: border-box;
+
+  background: transparent;
+  color: #fff;
+
+  border: 2px solid black;
+  border-radius: 5px;
+
+  outline: none;
+  font-size: 16px;
+  text-align: left;
+}
+
+.formulario input::placeholder {
+  color: rgba(255,255,255,0.45);
+}
+
+.formulario input:focus {
+  border-color: #fff;
 }
 
 .botao {
-  cursor: pointer;
-  font-family: "Barlow", sans-serif;
-  border: 0;
+  width: 100%;
+  height: 42px;
+
+  margin-top: 10px;
+
+  border: none;
   border-radius: 5px;
-  font-weight: 600;
-  font-size: 18px;
-  color: #fff;
-  background-color: #ED145B;
-  width: 120px;
-  height: 30px;
-  align-self: center;
-  margin-top: 20px;
+
+  background: #f5f5f5;
+  color: #000;
+
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.botao:hover {
+  background: #fff;
+  transform: translateY(-2px);
 }
 
 .loading-div {
   width: 50px;
+  margin: auto;
   display: none;
 }
 
 .loading-div img {
-  height: 50px;
   width: 50px;
+  height: 50px;
 }
 
 #div_erros_login {
-  display: none
+  display: none;
 }
 
-/* FORMULARIO */
+/* ALERTA DE ERRO */
 
-.alerta_erro{
+.alerta_erro {
   display: flex;
   justify-content: flex-end;
 }
@@ -286,52 +356,9 @@ body {
   margin-right: 10%;
 }
 
-.card_erro #mensagem_erro{
+.card_erro #mensagem_erro {
   font-weight: 500;
   font-size: 20px;
-}
-
-.formulario .tipo_campo {
-  font-size: 20px;
-  font-weight: 600 !important;
-}
-
-.formulario {
-  display: flex;
-  flex-direction: column;
-}
-
-input {
-  margin-bottom: 10px;
-  border: 2px solid #32b9cd;
-  padding: 10px;
-  text-align: center;
-  border-radius: 10px;
-}
-
-.btn {
-  font-family: "Barlow", sans-serif;
-  border: 0;
-  border-radius: 5px;
-  font-weight: 600;
-  font-size: 18px;
-  padding: 10px 15px;
-  color: white;
-  background-color: #ED145B;
-  width: 120px;
-  align-self: center;
-  margin-top: 5px;
-}
-
-.loading-div {
-  width: 50px;
-  margin: auto;
-  display: none;
-}
-
-.loading-div img {
-  height: 50px;
-  width: 50px;
 }
 
 /* SIMULADOR */
@@ -392,3 +419,4 @@ input {
   75%  {transform: rotate(-25deg)}
   100% {transform: rotate(25deg)}
 }
+
