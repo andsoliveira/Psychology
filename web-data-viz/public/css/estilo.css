@@ -147,6 +147,7 @@ body {
   width: 80%;
   background-color: rgba(255, 255, 255, 0.2);
   font-size: 25px;
+  color: #f2f2f2;
 } 
 /* FOOTER */
 
@@ -361,16 +362,27 @@ body {
   font-size: 20px;
 }
 
-/* SIMULADOR */
+/* SOBRE O PROJETO */
 
-.simulador {
-  color: white;
+.body {
+  min-height: 100vh;
+  background:linear-gradient(rgba(0, 0 , 0, 0.7), rgba(0, 0, 0,)), url('../assets/imgs/rafael.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat:no-repeat;
+
 }
 
-.simulador .container {
-  flex-direction: column;
-  overflow: scroll; 
-  height: var(--tamanho-simulador);
+.projeto .container {
+  width: 80%;
+  margin: auto;
+  background: rgba(0,0,0,0.5);
+  padding: 30px;
+  border-radius: 10px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-self: center;
 }
 
 /* ALERTA */
