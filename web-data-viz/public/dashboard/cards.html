@@ -53,9 +53,10 @@
 
             <div class="quiz-container">
                 <h1>Quiz do Bem-Estar</h1>
+
                 <p>
-                    Responda às perguntas abaixo para refletir sobre hábitos relacionados
-                    à dopamina, serotonina, endorfina e ocitocina.
+                    Responda às perguntas abaixo para testar seu entendimento
+                    sobre dopamina, serotonina, endorfina e ocitocina.
                 </p>
 
                 <div id="area_perguntas"></div>
@@ -68,69 +69,7 @@
         </div>
 
     </div>
+
+    <script src="../js/quizPerguntas.js"></script>
 </body>
-
-<script>
-    b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
-
-    var perguntas = [
-        {
-            texto: "Você dorme bem na maioria dos dias?",
-            hormonio: "Serotonina"
-        },
-        {
-            texto: "Você pratica atividade física durante a semana?",
-            hormonio: "Endorfina"
-        },
-        {
-            texto: "Você costuma concluir pequenas metas no seu dia?",
-            hormonio: "Dopamina"
-        },
-        {
-            texto: "Você tem contato social positivo com outras pessoas?",
-            hormonio: "Ocitocina"
-        }
-    ];
-
-    function carregarQuiz() {
-        var areaPerguntas = document.getElementById("area_perguntas");
-
-        for (var i = 0; i < perguntas.length; i++) {
-            areaPerguntas.innerHTML += `
-                <div class="card-pergunta">
-                    <h3>${i + 1}. ${perguntas[i].texto}</h3>
-                    <p>Hormônio relacionado: <b>${perguntas[i].hormonio}</b></p>
-
-                    <label>
-                        <input type="radio" name="pergunta${i}" value="sim">
-                        Sim
-                    </label>
-
-                    <label>
-                        <input type="radio" name="pergunta${i}" value="nao">
-                        Não
-                    </label>
-                </div>
-            `;
-        }
-    }
-
-    function finalizarQuiz() {
-        var pontos = 0;
-
-        for (var i = 0; i < perguntas.length; i++) {
-            var resposta = document.querySelector(`input[name="pergunta${i}"]:checked`);
-
-            if (resposta != null && resposta.value == "sim") {
-                pontos++;
-            }
-        }
-
-        resultado_quiz.innerHTML = `
-            <h2>Resultado</h2>
-            <p>Você respondeu positivamente ${pontos} de ${perguntas.length} perguntas.</p>
-        `;
-    }
-</script>
-
 </html>

@@ -27,7 +27,7 @@
                     <a href="index.html">Inicial</a>
                 </li>
                 <li>
-                    <a href="simulador.html">Sobre o projeto</a>
+                    <a href="sobreoprojeto.html">Sobre o projeto</a>
                 </li>
                 <li class="agora">
                     <a href="#" class="active">Login</a>
@@ -82,15 +82,19 @@
         var emailVar = email_input.value;
         var senhaVar = senha_input.value;
 
-        if (emailVar == "" || senhaVar == "") {
-            cardErro.style.display = "block"
-            mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
-            finalizarAguardar();
-            return false;
+        var campos = [emailVar, senhaVar];
+        var nomesCampos = ["e-mail", "senha"];
+
+        for (var i = 0; i < campos.length; i++) {
+            if (campos[i] == "") {
+                cardErro.style.display = "block";
+                mensagem_erro.innerHTML = "Preencha o campo " + nomesCampos[i] + ".";
+                finalizarAguardar();
+                return false;
+            }
         }
-        else {
-            setInterval(sumirMensagem, 5000)
-        }
+
+        setInterval(sumirMensagem, 5000);
 
         console.log("FORM LOGIN: ", emailVar);
         console.log("FORM SENHA: ", senhaVar);
