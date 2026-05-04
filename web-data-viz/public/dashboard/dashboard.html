@@ -40,10 +40,11 @@
             </div>
 
             <div class="btn-nav-white">
-                <a href="./cards.html">
+                <a href="./quiz.html">
                     <h3>Quiz</h3>
                 </a>
             </div>
+
 
             <div class="btn-nav">
 
@@ -59,40 +60,58 @@
     </div>
 
     <div class="dash">
+        <div class="dashboard-quiz">
+            <h1>Resultado do Quiz</h1>
 
-    <div class="dashboard-quiz">
-        <h1>Resultado do Quiz</h1>
+            <div id="kpi_entendimento" class="kpi-alerta">
+                <p id="texto_kpi"></p>
+            </div>
+            <div class="legenda-kpi">
+                <div class="item-legenda">
+                    <span class="bolinha verde"></span>
+                    <p>Compreensão alta (80% - 100%)</p>
+                </div>
 
-        <div class="cards-resultado">
-            <div class="card-resultado">
-                <h3>Serotonina</h3>
-                <p id="porcentagem_serotonina">0%</p>
+                <div class="item-legenda">
+                    <span class="bolinha amarelo"></span>
+                    <p>Compreensão média (60% - 79%)</p>
+                </div>
+
+                <div class="item-legenda">
+                    <span class="bolinha vermelho"></span>
+                    <p>Compreensão baixa (0% - 59%)</p>
+                </div>
             </div>
 
-            <div class="card-resultado">
-                <h3>Dopamina</h3>
-                <p id="porcentagem_dopamina">0%</p>
+            <div class="cards-resultado">
+                <div class="card-resultado">
+                    <h3>Serotonina</h3>
+                    <p id="porcentagem_serotonina">0%</p>
+                </div>
+
+                <div class="card-resultado">
+                    <h3>Dopamina</h3>
+                    <p id="porcentagem_dopamina">0%</p>
+                </div>
+
+                <div class="card-resultado">
+                    <h3>Endorfina</h3>
+                    <p id="porcentagem_endorfina">0%</p>
+                </div>
+
+                <div class="card-resultado">
+                    <h3>Ocitocina</h3>
+                    <p id="porcentagem_ocitocina">0%</p>
+                </div>
             </div>
 
-            <div class="card-resultado">
-                <h3>Endorfina</h3>
-                <p id="porcentagem_endorfina">0%</p>
+            <div class="area-grafico-quiz">
+                <canvas id="graficoQuiz"></canvas>
             </div>
-
-            <div class="card-resultado">
-                <h3>Ocitocina</h3>
-                <p id="porcentagem_ocitocina">0%</p>
-            </div>
-        </div>
-
-        <div class="area-grafico-quiz">
-            <canvas id="graficoQuiz"></canvas>
         </div>
     </div>
 
-</div>
-
-<script src="../js/dashboard.js"></script>
+    <script src="../js/dashboard.js"></script>
 </body>
 
 </html>

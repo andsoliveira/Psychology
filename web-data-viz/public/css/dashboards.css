@@ -265,3 +265,65 @@ canvas {
   padding: 20px;
   border-radius: 10px;
 }
+
+.kpi-alerta {
+    width: 90%;
+    max-width: 800px;
+    margin: 15px auto;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.kpi-verde {
+    background-color: #1f3d2b;
+    color: #4cff88;
+}
+
+.kpi-amarelo {
+    background-color: #3d3a1f;
+    color: #ffd54f;
+}
+
+.kpi-vermelho {
+    background-color: #3d1f1f;
+    color: #ff4c4c;
+}
+
+.legenda-kpi {
+    width: 90%;
+    max-width: 800px;
+    margin: 10px auto 20px auto;
+
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.item-legenda {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+}
+
+/* bolinhas */
+.bolinha {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+.verde {
+    background-color: #4cff88;
+}
+
+.amarelo {
+    background-color: #ffd54f;
+}
+
+.vermelho {
+    background-color: #ff4c4c;
+}

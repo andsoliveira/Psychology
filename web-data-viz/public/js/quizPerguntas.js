@@ -19,7 +19,8 @@ var perguntas = [
     hormonio: "serotonina",
   },
   {
-    pergunta: "Qual prática pode ajudar naturalmente na produção de serotonina?",
+    pergunta:
+      "Qual prática pode ajudar naturalmente na produção de serotonina?",
     alternativas: [
       "Contato com luz solar",
       "Privação de sono",
@@ -126,7 +127,9 @@ function embaralharAlternativas(pergunta) {
   var respostaCorreta = pergunta.alternativas[pergunta.correta];
 
   for (var i = 0; i < pergunta.alternativas.length; i++) {
-    var indiceAleatorio = Math.floor(Math.random() * pergunta.alternativas.length);
+    var indiceAleatorio = Math.floor(
+      Math.random() * pergunta.alternativas.length,
+    );
 
     var temp = pergunta.alternativas[i];
     pergunta.alternativas[i] = pergunta.alternativas[indiceAleatorio];
@@ -233,11 +236,23 @@ function finalizarQuiz() {
 
   resultado_quiz.innerHTML =
     "<h2>Resultado</h2>" +
-    "<p>Você acertou " + acertos +" de " + perguntas.length + " perguntas.</p>" +
-    "<p>Serotonina: " + porcentagemSerotonina.toFixed(0) + "%</p>" +
-    "<p>Dopamina: " + porcentagemDopamina.toFixed(0) + "%</p>" +
-    "<p>Endorfina: " + porcentagemEndorfina.toFixed(0) + "%</p>" +
-    "<p>Ocitocina: " + porcentagemOcitocina.toFixed(0) + "%</p>";
+    "<p>Você acertou " +
+    acertos +
+    " de " +
+    perguntas.length +
+    " perguntas.</p>" +
+    "<p>Serotonina: " +
+    porcentagemSerotonina.toFixed(0) +
+    "%</p>" +
+    "<p>Dopamina: " +
+    porcentagemDopamina.toFixed(0) +
+    "%</p>" +
+    "<p>Endorfina: " +
+    porcentagemEndorfina.toFixed(0) +
+    "%</p>" +
+    "<p>Ocitocina: " +
+    porcentagemOcitocina.toFixed(0) +
+    "%</p>";
 
   sessionStorage.PORCENTAGEM_SEROTONINA = porcentagemSerotonina.toFixed(0);
   sessionStorage.PORCENTAGEM_DOPAMINA = porcentagemDopamina.toFixed(0);
