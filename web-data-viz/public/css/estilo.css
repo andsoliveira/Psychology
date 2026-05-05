@@ -12,7 +12,6 @@ body {
 }
 
 .active{
-  text-decoration: line;
   border-bottom: 1px solid #fff;
 }
 
@@ -60,7 +59,6 @@ body {
 .navbar {
   width: 300px;
   display: flex;
-  align-items: center;
   justify-content: space-between;
   list-style: none;
   color: #e3b062;
@@ -74,7 +72,7 @@ body {
 
 .header h1 {
   margin: 0;
-} 
+}
 
 /* BANNER */
 
@@ -163,8 +161,10 @@ body {
 }
 
 .footer .container {
+  display: flex;
   justify-content: center;
   text-align: center;
+  color: #fff;
 }
 
 .footer .container .version {
@@ -348,17 +348,9 @@ body {
   font-size: 20px;
 }
 
-/* SOBRE O PROJETO */
+/* SOBRE MIM */
 
-.body {
-  min-height: 100vh;
-  background:linear-gradient(rgba(0, 0 , 0, 0.7), rgba(0, 0, 0,)), url('../assets/imgs/rafael.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat:no-repeat;
-}
-
-.projeto .container {
+.eu .container {
   width: 80%;
   margin: auto;
   background: rgba(0,0,0,0.5);
@@ -367,7 +359,115 @@ body {
   color: white;
   display: flex;
   justify-content: center;
-  align-self: center;
+}
+
+.sobre-mim {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.bloco {
+  background: rgba(0,0,0,0.5);
+  padding: 25px;
+  border-radius: 10px;
+}
+
+.bloco p {
+  font-size: 18px;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+.bloco img {
+  width: 100%;
+  max-width: 400px;
+  display: block;
+  margin: 20px auto;
+  border-radius: 10px;
+}
+
+.galeria {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.galeria img {
+  width: 30%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.video {
+  text-align: center;
+}
+
+.video video {
+  width: 100%;
+  max-width: 600px;
+  margin-top: 15px;
+  border-radius: 10px;
+}
+
+.agradecimentos {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.agradecimentos h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.galeria-agradecimentos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+.galeria-agradecimentos img {
+  width: 30%;
+  height: 200px;
+  object-fit: cover;
+  object-position:top;
+  border-radius: 10px;
+  margin: 0;
+  max-width: none;
+}
+
+.referencias-estudo {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 25px;
+}
+
+.ref {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.ref img {
+  width: 130px;
+  height: 130px;
+  object-fit: cover;
+  border-radius: 50%;
+  transition: transform 0.2s;
+  cursor: pointer;
+}
+
+.ref img:hover {
+  transform: translateY(-5px);
+}
+
+.ref span {
+  margin-top: 10px;
+  font-size: 14px;
 }
 
 /* ALERTA */
