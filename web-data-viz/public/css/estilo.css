@@ -3,10 +3,12 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Barlow', 'Segoe UI', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-image: url('../assets/imgs/cerebro.png');
-  background-size:cover;
-  background-position:center;
+  font-family: 'Barlow', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-image:
+    linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.75)),
+    url('../assets/imgs/cerebro.png');
+  background-size: cover;
+  background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
@@ -100,7 +102,7 @@ body {
   font-weight: 800;
 }
 
-/* MISSÃO VISÃO VALORES */
+/* HOME */
 
 .social {
   display: flex;
@@ -143,8 +145,8 @@ body {
   border-radius: 20px;
   padding: 20px;
   width: 80%;
-  background-color: rgba(255, 255, 255, 0.2);
-  font-size: 25px;
+  background-color: rgba(255, 255, 255, 0.3);
+  font-size: 26px;
   color: #f2f2f2;
 } 
 /* FOOTER */
@@ -365,6 +367,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 40px;
+  font-size: 26px;
 }
 
 .bloco {
@@ -374,7 +377,7 @@ body {
 }
 
 .bloco p {
-  font-size: 18px;
+  font-size: 26px;
   line-height: 1.6;
   text-align: justify;
 }
@@ -406,7 +409,7 @@ body {
 
 .video video {
   width: 100%;
-  max-width: 600px;
+  max-width: 1200px;
   margin-top: 15px;
   border-radius: 10px;
 }

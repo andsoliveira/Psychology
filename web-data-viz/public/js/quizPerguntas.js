@@ -2,116 +2,248 @@ b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
 
 var perguntas = [
   {
-    pergunta: "A serotonina está mais relacionada a qual aspecto?",
-    alternativas: ["Equilíbrio do humor", "Digestão", "Respiração", "Visão"],
-    correta: 0,
-    hormonio: "serotonina",
-  },
-  {
-    pergunta: "Baixos níveis de serotonina podem estar associados a:",
+    pergunta: "Segundo o conteúdo apresentado no site, qual hábito pode auxiliar naturalmente no equilíbrio da serotonina?",
     alternativas: [
-      "Melhora do humor",
-      "Alterações de humor",
-      "Aumento da força física",
-      "Melhora da visão",
+      "Dormir poucas horas",
+      "Exposição ao sol",
+      "Uso excessivo de telas",
+      "Isolamento social"
     ],
     correta: 1,
-    hormonio: "serotonina",
+    hormonio: "serotonina"
   },
+
   {
-    pergunta:
-      "Qual prática pode ajudar naturalmente na produção de serotonina?",
+    pergunta: "A serotonina está mais relacionada a:",
     alternativas: [
-      "Contato com luz solar",
-      "Privação de sono",
-      "Isolamento social",
-      "Estresse constante",
+      "Controle emocional e sensação de bem-estar",
+      "Crescimento muscular imediato",
+      "Digestão de gordura",
+      "Produção de adrenalina"
     ],
     correta: 0,
-    hormonio: "serotonina",
+    hormonio: "serotonina"
   },
+
   {
-    pergunta: "A dopamina está relacionada principalmente a qual processo?",
-    alternativas: ["Motivação e recompensa", "Digestão", "Respiração", "Visão"],
-    correta: 0,
-    hormonio: "dopamina",
-  },
-  {
-    pergunta: "Qual situação estimula a dopamina naturalmente?",
+    pergunta: "Uma rotina saudável de sono pode auxiliar principalmente no equilíbrio de:",
     alternativas: [
-      "Cumprir metas",
-      "Evitar desafios",
-      "Dormir mal",
-      "Ficar isolado",
+      "Serotonina",
+      "Ácido lático",
+      "Insulina",
+      "Adrenalina"
     ],
     correta: 0,
-    hormonio: "dopamina",
+    hormonio: "serotonina"
   },
+
   {
-    pergunta: "No contexto do projeto, a dopamina está ligada a:",
+    pergunta: "Segundo estudos sobre bem-estar, baixos níveis de serotonina podem estar relacionados a:",
     alternativas: [
-      "Sensação de conquista",
-      "Controle da temperatura",
-      "Digestão",
-      "Sono profundo",
+      "Maior estabilidade emocional",
+      "Alterações de humor",
+      "Aumento da disposição física extrema",
+      "Crescimento muscular acelerado"
     ],
-    correta: 0,
-    hormonio: "dopamina",
+    correta: 1,
+    hormonio: "serotonina"
   },
+
   {
-    pergunta: "Qual prática estimula a liberação de endorfina?",
+    pergunta: "Qual hábito abaixo pode auxiliar naturalmente na regulação emocional e bem-estar?",
     alternativas: [
-      "Atividade física",
       "Sedentarismo",
       "Privação de sono",
-      "Estresse contínuo",
+      "Exposição à luz solar e rotina equilibrada",
+      "Estresse constante"
+    ],
+    correta: 2,
+    hormonio: "serotonina"
+  },
+
+  {
+    pergunta: "Concluir uma meta importante pode estimular principalmente qual substância ligada ao sistema de recompensa cerebral?",
+    alternativas: [
+      "Cortisol",
+      "Dopamina",
+      "Melatonina",
+      "Insulina"
+    ],
+    correta: 1,
+    hormonio: "dopamina"
+  },
+
+  {
+    pergunta: "A dopamina possui forte relação com:",
+    alternativas: [
+      "Motivação e sensação de recompensa",
+      "Digestão intestinal",
+      "Produção de cálcio",
+      "Crescimento ósseo"
     ],
     correta: 0,
-    hormonio: "endorfina",
+    hormonio: "dopamina"
   },
+
   {
-    pergunta: "A endorfina está associada a:",
-    alternativas: ["Alívio da dor e prazer", "Memória", "Visão", "Digestão"],
+    pergunta: "Receber reconhecimento após alcançar um objetivo pode aumentar a liberação de:",
+    alternativas: [
+      "Dopamina",
+      "Ocitocina",
+      "Cortisol",
+      "Adrenalina"
+    ],
     correta: 0,
-    hormonio: "endorfina",
+    hormonio: "dopamina"
   },
+
   {
-    pergunta: "Durante exercícios, a endorfina contribui para:",
+    pergunta: "Criar pequenas metas diárias pode auxiliar principalmente em qual aspecto cerebral?",
+    alternativas: [
+      "Motivação e continuidade de hábitos",
+      "Crescimento ósseo",
+      "Controle respiratório",
+      "Digestão de proteínas"
+    ],
+    correta: 0,
+    hormonio: "dopamina"
+  },
+
+  {
+    pergunta: "O sistema de recompensa cerebral está diretamente associado à:",
+    alternativas: [
+      "Dopamina",
+      "Hemoglobina",
+      "Insulina",
+      "Melatonina"
+    ],
+    correta: 0,
+    hormonio: "dopamina"
+  },
+
+  {
+    pergunta: "Após exercícios físicos intensos, qual substância está associada à sensação de bem-estar?",
+    alternativas: [
+      "Endorfina",
+      "Insulina",
+      "Cortisol",
+      "Adrenalina"
+    ],
+    correta: 0,
+    hormonio: "endorfina"
+  },
+
+  {
+    pergunta: "As endorfinas são conhecidas principalmente por auxiliar:",
+    alternativas: [
+      "No alívio natural da dor",
+      "Na digestão de gordura",
+      "No crescimento capilar",
+      "Na produção de glicose"
+    ],
+    correta: 0,
+    hormonio: "endorfina"
+  },
+
+  {
+    pergunta: "Qual hábito pode estimular naturalmente a produção de endorfina?",
+    alternativas: [
+      "Sedentarismo",
+      "Exercícios físicos",
+      "Privação de sono",
+      "Isolamento social"
+    ],
+    correta: 1,
+    hormonio: "endorfina"
+  },
+
+  {
+    pergunta: "Durante atividades físicas, a liberação de endorfina pode auxiliar em:",
     alternativas: [
       "Sensação de bem-estar",
-      "Cansaço extremo",
-      "Perda de energia",
-      "Redução do humor",
+      "Redução da memória",
+      "Queda da circulação sanguínea",
+      "Diminuição da respiração"
     ],
     correta: 0,
-    hormonio: "endorfina",
+    hormonio: "endorfina"
   },
+
   {
-    pergunta: "A ocitocina está ligada a:",
-    alternativas: ["Vínculos sociais", "Digestão", "Visão", "Respiração"],
-    correta: 0,
-    hormonio: "ocitocina",
-  },
-  {
-    pergunta: "Qual ação estimula a ocitocina?",
+    pergunta: "As endorfinas são frequentemente chamadas de:",
     alternativas: [
-      "Abraços e interação social",
-      "Isolamento",
-      "Estresse",
-      "Falta de sono",
+      "Hormônios do medo",
+      "Analgésicos naturais do cérebro",
+      "Hormônios da digestão",
+      "Hormônios do estresse"
+    ],
+    correta: 1,
+    hormonio: "endorfina"
+  },
+
+  {
+    pergunta: "Qual substância está mais relacionada à conexão social e confiança?",
+    alternativas: [
+      "Cortisol",
+      "Ocitocina",
+      "Insulina",
+      "Adrenalina"
+    ],
+    correta: 1,
+    hormonio: "ocitocina"
+  },
+
+  {
+    pergunta: "Interações sociais positivas podem estimular a liberação de:",
+    alternativas: [
+      "Ocitocina",
+      "Ácido lático",
+      "Insulina",
+      "Cortisol"
     ],
     correta: 0,
-    hormonio: "ocitocina",
+    hormonio: "ocitocina"
   },
+
   {
-    pergunta: "A ocitocina ajuda principalmente em:",
-    alternativas: ["Confiança e conexão", "Dor muscular", "Fome", "Visão"],
+    pergunta: "A ocitocina possui forte relação com:",
+    alternativas: [
+      "Vínculos afetivos e empatia",
+      "Digestão intestinal",
+      "Crescimento muscular",
+      "Produção de energia"
+    ],
     correta: 0,
-    hormonio: "ocitocina",
+    hormonio: "ocitocina"
   },
+
+  {
+    pergunta: "Qual hábito abaixo pode contribuir para conexões sociais saudáveis?",
+    alternativas: [
+      "Isolamento constante",
+      "Convívio social positivo",
+      "Privação emocional",
+      "Estresse contínuo"
+    ],
+    correta: 1,
+    hormonio: "ocitocina"
+  },
+
+  {
+    pergunta: "A ocitocina é frequentemente associada a:",
+    alternativas: [
+      "Relações interpessoais e confiança",
+      "Produção de adrenalina",
+      "Crescimento ósseo",
+      "Digestão de gordura"
+    ],
+    correta: 0,
+    hormonio: "ocitocina"
+  }
 ];
 
 var respostasUsuario = [];
+var perguntaAtual = 0;
 
 function embaralharPerguntas() {
   for (var i = 0; i < perguntas.length; i++) {
@@ -158,36 +290,69 @@ function montarQuiz() {
   area.innerHTML = "";
 
   var letras = ["A", "B", "C", "D"];
+  var alternativasHTML = "";
 
-  for (var i = 0; i < perguntas.length; i++) {
-    var alternativasHTML = "";
+  for (var j = 0; j < perguntas[perguntaAtual].alternativas.length; j++) {
+    var corBotao = "";
 
-    for (var j = 0; j < perguntas[i].alternativas.length; j++) {
-      var corBotao = "";
-
-      if (respostasUsuario[i] == j) {
-        corBotao = "style='background-color:#32b9cd'";
-      }
-
-      alternativasHTML += `
-        <button ${corBotao} onclick="responder(${i}, ${j})">
-          ${letras[j]}) ${perguntas[i].alternativas[j]}
-        </button>
-      `;
+    if (respostasUsuario[perguntaAtual] == j) {
+      corBotao = "style='background-color:#32b9cd'";
     }
 
-    area.innerHTML += `
-      <div class="card-pergunta">
-        <h3>${i + 1}. ${perguntas[i].pergunta}</h3>
-        ${alternativasHTML}
-      </div>
+    alternativasHTML += `
+      <button ${corBotao} onclick="responder(${perguntaAtual}, ${j})">
+        ${letras[j]}) ${perguntas[perguntaAtual].alternativas[j]}
+      </button>
     `;
   }
+
+  var botaoNavegacao = "";
+
+  if (perguntaAtual == 0) {
+    botaoNavegacao = `
+    <button onclick="proximaPergunta()">Próxima</button>
+  `;
+  } else if (perguntaAtual < perguntas.length - 1) {
+    botaoNavegacao = `
+    <button onclick="voltarPergunta()">Voltar</button>
+    <button onclick="proximaPergunta()">Próxima</button>
+  `;
+  } else {
+    botaoNavegacao = `
+    <button onclick="voltarPergunta()">Voltar</button>
+    <button onclick="finalizarQuiz()">Finalizar Quiz</button>
+  `;
+  }
+
+  area.innerHTML = `
+    <div class="card-pergunta">
+      <h3>${perguntaAtual + 1}. ${perguntas[perguntaAtual].pergunta}</h3>
+      ${alternativasHTML}
+    </div>
+
+    ${botaoNavegacao}
+  `;
 }
 
 function responder(numeroPergunta, alternativaEscolhida) {
   respostasUsuario[numeroPergunta] = alternativaEscolhida;
   montarQuiz();
+}
+
+function proximaPergunta() {
+  if (respostasUsuario[perguntaAtual] == undefined) {
+    alert("Escolha uma alternativa antes de continuar.");
+  } else {
+    perguntaAtual++;
+    montarQuiz();
+  }
+}
+
+function voltarPergunta() {
+  if (perguntaAtual > 0) {
+    perguntaAtual--;
+    montarQuiz();
+  }
 }
 
 function finalizarQuiz() {

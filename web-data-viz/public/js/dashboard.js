@@ -61,13 +61,13 @@ function carregarDashboardQuiz() {
 
         if (mediaQuiz >= 80) {
           kpi.classList.add("kpi-verde");
-          texto.innerHTML = "Você entendeu basicamente tudo do conteúdo 👏";
+          texto.innerHTML = "Você entendeu o conteúdo.";
         } else if (mediaQuiz >= 60) {
           kpi.classList.add("kpi-amarelo");
-          texto.innerHTML = "Você entendeu bem, mas ainda pode melhorar";
+          texto.innerHTML = "Você entendeu bem, mas ainda pode melhorar.";
         } else {
           kpi.classList.add("kpi-vermelho");
-          texto.innerHTML = "Reveja o conteúdo para melhor entendimento";
+          texto.innerHTML = "Reveja o conteúdo para melhorar seu entendimento.";
         }
       }
     })
@@ -111,11 +111,17 @@ function criarGrafico(serotonina, dopamina, endorfina, ocitocina) {
             escolherCor(endorfina),
             escolherCor(ocitocina),
           ],
+          // Ajuste de largura das barras para melhorar a visualização
           borderWidth: 1,
+          barPercentage: 0.8,
+          categoryPercentage: 0.6,
         },
       ],
     },
     options: {
+      responsive: true,
+      maintainAspectRatio: false,
+
       scales: {
         y: {
           beginAtZero: true,
