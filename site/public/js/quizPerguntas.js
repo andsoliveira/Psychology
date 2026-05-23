@@ -2,35 +2,23 @@ b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
 
 let perguntas = [
   {
-    pergunta: "Segundo o conteúdo apresentado no site, qual hábito pode auxiliar naturalmente no equilíbrio da serotonina?",
+    pergunta: "O que ajuda no bem-estar emocional?",
     alternativas: [
-      "Dormir poucas horas",
+      "Privação de sono",
       "Exposição ao sol",
-      "Uso excessivo de telas",
-      "Isolamento social"
+      "Estresse constante",
+      "Sedentarismo"
     ],
     correta: 1,
     hormonio: "serotonina"
   },
 
   {
-    pergunta: "A serotonina está mais relacionada a:",
+    pergunta: "A serotonina está ligada principalmente a:",
     alternativas: [
-      "Controle emocional e sensação de bem-estar",
-      "Crescimento muscular imediato",
-      "Digestão de gordura",
-      "Produção de adrenalina"
-    ],
-    correta: 0,
-    hormonio: "serotonina"
-  },
-
-  {
-    pergunta: "Uma rotina saudável de sono pode auxiliar principalmente no equilíbrio de:",
-    alternativas: [
-      "Serotonina",
-      "Ácido lático",
-      "Insulina",
+      "Bem-estar",
+      "Digestão",
+      "Força muscular",
       "Adrenalina"
     ],
     correta: 0,
@@ -38,31 +26,31 @@ let perguntas = [
   },
 
   {
-    pergunta: "Segundo estudos sobre bem-estar, baixos níveis de serotonina podem estar relacionados a:",
+    pergunta: "Baixa serotonina pode causar:",
     alternativas: [
-      "Maior estabilidade emocional",
+      "Mais disposição",
       "Alterações de humor",
-      "Aumento da disposição física extrema",
-      "Crescimento muscular acelerado"
+      "Mais energia física",
+      "Crescimento muscular"
     ],
     correta: 1,
     hormonio: "serotonina"
   },
 
   {
-    pergunta: "Qual hábito abaixo pode auxiliar naturalmente na regulação emocional e bem-estar?",
+    pergunta: "Dormir bem ajuda no equilíbrio de qual hormônio?",
     alternativas: [
-      "Sedentarismo",
-      "Privação de sono",
-      "Exposição à luz solar e rotina equilibrada",
-      "Estresse constante"
+      "Insulina",
+      "Adrenalina",
+      "Serotonina",
+      "Cortisol"
     ],
     correta: 2,
     hormonio: "serotonina"
   },
 
   {
-    pergunta: "Concluir uma meta importante pode estimular principalmente qual substância ligada ao sistema de recompensa cerebral?",
+    pergunta: "Qual hormônio está ligado à motivação?",
     alternativas: [
       "Cortisol",
       "Dopamina",
@@ -74,127 +62,103 @@ let perguntas = [
   },
 
   {
-    pergunta: "A dopamina possui forte relação com:",
+    pergunta: "A dopamina está relacionada ao:",
     alternativas: [
-      "Motivação e sensação de recompensa",
-      "Digestão intestinal",
-      "Produção de cálcio",
-      "Crescimento ósseo"
-    ],
-    correta: 0,
-    hormonio: "dopamina"
-  },
-
-  {
-    pergunta: "Receber reconhecimento após alcançar um objetivo pode aumentar a liberação de:",
-    alternativas: [
-      "Dopamina",
-      "Ocitocina",
-      "Cortisol",
-      "Adrenalina"
-    ],
-    correta: 0,
-    hormonio: "dopamina"
-  },
-
-  {
-    pergunta: "Criar pequenas metas diárias pode auxiliar principalmente em qual aspecto cerebral?",
-    alternativas: [
-      "Motivação e continuidade de hábitos",
+      "Sistema de recompensa",
       "Crescimento ósseo",
-      "Controle respiratório",
-      "Digestão de proteínas"
+      "Digestão",
+      "Controle respiratório"
     ],
     correta: 0,
     hormonio: "dopamina"
   },
 
   {
-    pergunta: "O sistema de recompensa cerebral está diretamente associado à:",
+    pergunta: "Cumprir metas pode aumentar:",
     alternativas: [
+      "Insulina",
       "Dopamina",
-      "Hemoglobina",
-      "Insulina",
-      "Melatonina"
+      "Cortisol",
+      "Ácido lático"
+    ],
+    correta: 1,
+    hormonio: "dopamina"
+  },
+
+  {
+    pergunta: "Pequenas metas ajudam na:",
+    alternativas: [
+      "Motivação",
+      "Digestão",
+      "Respiração",
+      "Circulação"
     ],
     correta: 0,
     hormonio: "dopamina"
   },
 
   {
-    pergunta: "Após exercícios físicos intensos, qual substância está associada à sensação de bem-estar?",
+    pergunta: "Qual hormônio aumenta após exercícios físicos?",
     alternativas: [
-      "Endorfina",
       "Insulina",
+      "Endorfina",
       "Cortisol",
       "Adrenalina"
     ],
-    correta: 0,
+    correta: 1,
     hormonio: "endorfina"
   },
 
   {
-    pergunta: "As endorfinas são conhecidas principalmente por auxiliar:",
+    pergunta: "A endorfina ajuda no:",
     alternativas: [
-      "No alívio natural da dor",
-      "Na digestão de gordura",
-      "No crescimento capilar",
-      "Na produção de glicose"
+      "Alívio da dor",
+      "Crescimento capilar",
+      "Controle da glicose",
+      "Aumento da gordura"
     ],
     correta: 0,
     hormonio: "endorfina"
   },
 
   {
-    pergunta: "Qual hábito pode estimular naturalmente a produção de endorfina?",
+    pergunta: "O que estimula naturalmente a endorfina?",
     alternativas: [
       "Sedentarismo",
       "Exercícios físicos",
       "Privação de sono",
-      "Isolamento social"
+      "Isolamento"
     ],
     correta: 1,
     hormonio: "endorfina"
   },
 
   {
-    pergunta: "Durante atividades físicas, a liberação de endorfina pode auxiliar em:",
+    pergunta: "A endorfina está ligada à sensação de:",
     alternativas: [
-      "Sensação de bem-estar",
-      "Redução da memória",
-      "Queda da circulação sanguínea",
-      "Diminuição da respiração"
+      "Bem-estar",
+      "Fadiga extrema",
+      "Estresse",
+      "Ansiedade"
     ],
     correta: 0,
     hormonio: "endorfina"
   },
 
   {
-    pergunta: "As endorfinas são frequentemente chamadas de:",
+    pergunta: "Qual hormônio está ligado à confiança?",
     alternativas: [
-      "Hormônios do medo",
-      "Analgésicos naturais do cérebro",
-      "Hormônios da digestão",
-      "Hormônios do estresse"
-    ],
-    correta: 1,
-    hormonio: "endorfina"
-  },
-
-  {
-    pergunta: "Qual substância está mais relacionada à conexão social e confiança?",
-    alternativas: [
-      "Cortisol",
+      "Adrenalina",
       "Ocitocina",
       "Insulina",
-      "Adrenalina"
+      "Cortisol"
     ],
     correta: 1,
     hormonio: "ocitocina"
   },
 
   {
-    pergunta: "Interações sociais positivas podem estimular a liberação de:",
+    pergunta: "Convívio social positivo aumenta:",
     alternativas: [
       "Ocitocina",
       "Ácido lático",
@@ -206,10 +170,10 @@ let perguntas = [
   },
 
   {
-    pergunta: "A ocitocina possui forte relação com:",
+    pergunta: "A ocitocina está ligada a:",
     alternativas: [
-      "Vínculos afetivos e empatia",
-      "Digestão intestinal",
+      "Empatia",
+      "Digestão",
       "Crescimento muscular",
       "Produção de energia"
     ],
@@ -218,24 +182,12 @@ let perguntas = [
   },
 
   {
-    pergunta: "Qual hábito abaixo pode contribuir para conexões sociais saudáveis?",
+    pergunta: "A ocitocina é conhecida por fortalecer:",
     alternativas: [
-      "Isolamento constante",
-      "Convívio social positivo",
-      "Privação emocional",
-      "Estresse contínuo"
-    ],
-    correta: 1,
-    hormonio: "ocitocina"
-  },
-
-  {
-    pergunta: "A ocitocina é frequentemente associada a:",
-    alternativas: [
-      "Relações interpessoais e confiança",
+      "Relações sociais",
       "Produção de adrenalina",
       "Crescimento ósseo",
-      "Digestão de gordura"
+      "Digestão"
     ],
     correta: 0,
     hormonio: "ocitocina"
@@ -424,7 +376,7 @@ function finalizarQuiz() {
   sessionStorage.PORCENTAGEM_ENDORFINA = porcentagemEndorfina.toFixed(0);
   sessionStorage.PORCENTAGEM_OCITOCINA = porcentagemOcitocina.toFixed(0);
 
-  fetch("/quiz/sallet", {
+  fetch("/quiz/salvar", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",

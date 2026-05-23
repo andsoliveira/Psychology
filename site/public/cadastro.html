@@ -15,7 +15,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" />
 </head>
 
-<body class="pagina-cadastro" onload="listar()">
+<body class="pagina-cadastro">
   <!--header inicio-->
   <div class="header">
     <div class="container">
@@ -88,17 +88,17 @@
 
     //Recupere o valor da nova input pelo nome do id
     // Agora vá para o método fetch logo abaixo
-    let nomelet = nome_input.value;
-    let emaillet = email_input.value;
-    let senhalet = senha_input.value;
-    let confirmacaoSenhalet = confirmacao_senha_input.value;
+    let nomeVar = nome_input.value;
+    let emailVar = email_input.value;
+    let senhaVar = senha_input.value;
+    let confirmacaoSenhaVar = confirmacao_senha_input.value;
 
     // Verificando se há algum campo em branco
     if (
-      nomelet == "" ||
-      emaillet == "" ||
-      senhalet == "" ||
-      confirmacaoSenhalet == ""
+      nomeVar == "" ||
+      emailVar == "" ||
+      senhaVar == "" ||
+      confirmacaoSenhaVar == ""
     ) {
       cardErro.style.display = "block";
       mensagem_erro.innerHTML =
