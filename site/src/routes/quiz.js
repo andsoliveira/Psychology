@@ -1,0 +1,14 @@
+let express = require("express");
+let router = express.Router();
+
+let quizController = require("../controllers/quizController");
+
+router.post("/salvar", function (req, res) {
+    quizController.salvar(req, res);
+});
+
+router.get("/ultimo/:idUsuario", function (req, res) {
+    quizController.buscarUltimo(req, res);
+});
+
+module.exports = router;
