@@ -115,87 +115,56 @@ canvas {
 }
 
 .hello {
-  width: 70%;
   display: flex;
   justify-content: center;
-  padding: 12px;
-  border-radius: 12px;
-  box-sizing: border-box;
-  background: rgba(255,255,255,0.04);
-  border: 1px solid rgba(255,255,255,0.08);
+  width: 70%;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ffffff;
+  font-size: 25px;
 }
 
 .hello h3 {
-  color: #dbeafe;
-  font-weight: 300;
-  font-size: 1.1rem;
   margin: 0;
+  color: white;
 }
 
 .hello h3 span {
-  font-weight: 800;
-  color: #e3b062;
+  font-weight: 200;
+  color: #f7f32b;
+}
+
+.btn-nav,
+.btn-nav-white,
+.btn-logout {
+  width: 70%;
+  padding-bottom: 15px;
+  margin-bottom: 40px;
+  border-bottom: 1px solid transparent;
+  background: transparent;
+  cursor: pointer;
+  border-radius: 5px;
+  padding: 5px;
+  border: 1px solid rgb(255, 255, 255);
 }
 
 .btn-nav {
-  width: 70%;
-  color: white;
-  background: rgba(50, 185, 205, 0.15);
-  border: 1px solid rgba(50, 185, 205, 0.30);
-  border-radius: 12px;
-  text-align: center;
-  padding: 14px;
-  box-sizing: border-box;
-  transition: 0.3s;
-}
-
-.btn-nav-white {
-  width: 70%;
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 12px;
-  text-align: center;
-  padding: 14px;
-  box-sizing: border-box;
-  transition: 0.3s;
-}
-
-.btn-nav-white h3 {
-  color: #dbeafe;
-  padding: 0;
-  margin: 0;
-}
-
-.btn-nav:hover,
-.btn-nav-white:hover {
-  transform: translateY(-2px);
-  border-color: rgba(50, 185, 205, 0.45);
+  border-bottom: 5px solid cyan;
 }
 
 .btn-nav h3,
+.btn-nav-white h3,
 .btn-logout h3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin: 0;
-  padding: 0;
+  color: white;
 }
 
-.btn-logout {
-  width: 70%;
-  padding: 14px;
-  margin-bottom: 60px;
-  border-radius: 12px;
-  text-align: center;
-  cursor: pointer;
-  box-sizing: border-box;
-  background: rgba(239, 68, 68, 0.08);
-  border: 1px solid rgba(239, 68, 68, 0.18);
-  color: #fff;
-  transition: 0.3s;
+.btn-logout h3 {
+  color: red;
 }
 
-.btn-logout:hover {
-  transform: translateY(-2px);
-  border-color: rgba(239, 68, 68, 0.35);
-}
 
 /* QUIZ */
 
@@ -227,7 +196,6 @@ canvas {
   border-radius: 20px;
   box-sizing: border-box;
   border: 1px solid rgba(50,185,205,0.22);
-  box-shadow: 0 20px 45px rgba(0,0,0,0.35);
 }
 
 .card-pergunta {
@@ -293,7 +261,6 @@ canvas {
   border-radius: 18px;
   box-sizing: border-box;
   border: 1px solid rgba(50, 185, 205, 0.25);
-  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.35);
   align-self: flex-start;
 }
 
@@ -313,19 +280,16 @@ canvas {
 }
 
 .card-resultado {
-  background: linear-gradient(180deg, #111827, #0b1120);
   width: 180px;
   padding: 22px;
   border-radius: 18px;
   text-align: center;
-  border: 1px solid rgba(50, 185, 205, 0.18);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35); /*cria uma sombra ao redor da caixa*/
   transition: 0.3s;
 }
 .card-resultado:hover {
   transform: translateY(-6px);
   border-color: rgba(50, 185, 205, 0.45);
-  box-shadow: 0 0 20px rgba(50, 185, 205, 0.18);
 }
 
 .card-resultado h3 {
@@ -356,6 +320,7 @@ canvas {
 
 /* KPI */
 
+/* quando encerra o quiz aparece */
 .kpi-alerta {
     width: 100%;
     margin: 20px 0;
@@ -369,7 +334,7 @@ canvas {
 
 .kpi-verde {
     background: rgba(34, 197, 94, 0.12);
-    border-color: rgba(34, 197, 94, 0.35);
+    border-color: rgba(187, 86, 86, 0.35);
     color: #86efac;
 }
 
@@ -389,7 +354,7 @@ canvas {
     width: 100%;
     margin: 10px 0 25px 0;
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     gap: 25px;
     flex-wrap: wrap;
 }

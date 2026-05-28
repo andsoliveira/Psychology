@@ -26,7 +26,7 @@ let perguntas = [
   },
 
   {
-    pergunta: "Baixa serotonina pode causar:",
+    pergunta: "A serotonina influencia diretamente:",
     alternativas: [
       "Mais disposição",
       "Alterações de humor",
@@ -197,29 +197,45 @@ let perguntas = [
 let respostasUsuario = [];
 let perguntaAtual = 0;
 
+  // Função para embaralhar perguntas do quiz
 function embaralharPerguntas() {
+  // Percorre todas as perguntas
   for (let i = 0; i < perguntas.length; i++) {
+    // Gera um índice aleatório
     let indiceAleatorio = Math.floor(Math.random() * perguntas.length);
 
+    // Guarda temporariamente a pergunta atual
     let temp = perguntas[i];
+
+    // Troca a pergunta atual pela pergunta aleatória
     perguntas[i] = perguntas[indiceAleatorio];
+
+    // Coloca a pergunta guardada na posição aleatória
     perguntas[indiceAleatorio] = temp;
   }
 }
 
+// Embaralhar as alternativas
 function embaralharAlternativas(pergunta) {
+
+  //Guarda qual era a resposta correta antes de embaralhar
   let respostaCorreta = pergunta.alternativas[pergunta.correta];
 
   for (let i = 0; i < pergunta.alternativas.length; i++) {
+
+    //Gera um índice aleatório para as alternativas
     let indiceAleatorio = Math.floor(
       Math.random() * pergunta.alternativas.length,
     );
 
+    // Faz a troca das alternativas
     let temp = pergunta.alternativas[i];
+
     pergunta.alternativas[i] = pergunta.alternativas[indiceAleatorio];
     pergunta.alternativas[indiceAleatorio] = temp;
   }
 
+  // Procura onde a resposta correta ficou após o embaralhamento
   for (let i = 0; i < pergunta.alternativas.length; i++) {
     if (pergunta.alternativas[i] == respostaCorreta) {
       pergunta.correta = i;
@@ -244,13 +260,15 @@ function montarQuiz() {
   let letras = ["A", "B", "C", "D"];
   let alternativasHTML = "";
 
+   // Percorre as alternativas da pergunta atual
   for (let j = 0; j < perguntas[perguntaAtual].alternativas.length; j++) {
     let corBotao = "";
-
+    // Se o usuário já escolheu essa alternativa, muda a cor do botão
     if (respostasUsuario[perguntaAtual] == j) {
-      corBotao = "style='background-color:#32b9cd'";
+      corBotao = "style='background-color:#32b9cd'";  /* azul elétrico para sinalizar a alternativa selecionada */
     }
 
+    // Monta o botão da alternativa atual
     alternativasHTML += `
       <button ${corBotao} onclick="responder(${perguntaAtual}, ${j})">
         ${letras[j]}) ${perguntas[perguntaAtual].alternativas[j]}
@@ -258,24 +276,32 @@ function montarQuiz() {
     `;
   }
 
+  // Guarda os botões de navegação: próxima, voltar ou finalizar
   let botaoNavegacao = "";
 
+  // Se estiver na primeira pergunta, mostra só o botão próxima
   if (perguntaAtual == 0) {
     botaoNavegacao = `
     <button onclick="proximaPergunta()">Próxima</button>
   `;
+
+  // Se estiver no meio do quiz entre 1~14, mostra voltar e próxima
   } else if (perguntaAtual < perguntas.length - 1) {
     botaoNavegacao = `
     <button onclick="voltarPergunta()">Voltar</button>
     <button onclick="proximaPergunta()">Próxima</button>
   `;
-  } else {
+ } 
+ 
+  // Última pergunta
+ else {
     botaoNavegacao = `
     <button onclick="voltarPergunta()">Voltar</button>
     <button onclick="finalizarQuiz()">Finalizar Quiz</button>
   `;
   }
 
+  //Exibe na tela a pergunta atual, alternativas e botões
   area.innerHTML = `
     <div class="card-pergunta">
       <h3>${perguntaAtual + 1}. ${perguntas[perguntaAtual].pergunta}</h3>
@@ -307,7 +333,11 @@ function voltarPergunta() {
   }
 }
 
+//Função responsável pela finalização do quiz e início da comunicação com backend
 function finalizarQuiz() {
+
+  //Variáveis para contagem de acertos gerais, os acertos de cada hormônio e total de perguntas de cada hormônio
+
   let acertos = 0;
 
   let pontosSerotonina = 0;
@@ -319,6 +349,9 @@ function finalizarQuiz() {
   let totalDopamina = 0;
   let totalEndorfina = 0;
   let totalOcitocina = 0;
+
+    // Percorre todas as perguntas
+    // Conta o total de perguntas por hormônio e verifica os acertos do usuário
 
   for (let i = 0; i < perguntas.length; i++) {
     if (perguntas[i].hormonio == "serotonina") {
@@ -346,10 +379,15 @@ function finalizarQuiz() {
     }
   }
 
+
+  //Calcula a porcentagem de acertos de cada hormônio
+
   let porcentagemSerotonina = (pontosSerotonina / totalSerotonina) * 100;
   let porcentagemDopamina = (pontosDopamina / totalDopamina) * 100;
   let porcentagemEndorfina = (pontosEndorfina / totalEndorfina) * 100;
   let porcentagemOcitocina = (pontosOcitocina / totalOcitocina) * 100;
+
+  //Exibe os resultados do quiz na tela
 
   resultado_quiz.innerHTML =
     "<h2>Resultado</h2>" +
@@ -371,16 +409,19 @@ function finalizarQuiz() {
     porcentagemOcitocina.toFixed(0) +
     "%</p>";
 
+    //sessionStorage salva temporariamente no navegador
   sessionStorage.PORCENTAGEM_SEROTONINA = porcentagemSerotonina.toFixed(0);
   sessionStorage.PORCENTAGEM_DOPAMINA = porcentagemDopamina.toFixed(0);
   sessionStorage.PORCENTAGEM_ENDORFINA = porcentagemEndorfina.toFixed(0);
   sessionStorage.PORCENTAGEM_OCITOCINA = porcentagemOcitocina.toFixed(0);
 
+  // Aqui inicia a comunicação com o backend
   fetch("/quiz/salvar", {
     method: "POST",
     headers: {
-      "Content-Type": "application/json",
+      "Content-Type": "application/json", 
     },
+    //Converte os dados do quiz para formato JSON em string para enviar
     body: JSON.stringify({
       fkUsuario: sessionStorage.ID_USUARIO,
       serotonina: porcentagemSerotonina.toFixed(0),
@@ -391,14 +432,17 @@ function finalizarQuiz() {
       totalPerguntas: perguntas.length,
     }),
   })
+  //Converte a resposta do backend em JSON
     .then(function (resposta) {
       return resposta.json();
     })
+    //2 segundo e vai direcionar para a dashboard
     .then(function () {
       setTimeout(function () {
         window.location = "./dashboard.html";
       }, 2000);
     })
+    //Exibe erros caso aconteça algum problema na req
     .catch(function (erro) {
       console.log(erro);
     });
