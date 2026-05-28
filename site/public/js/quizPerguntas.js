@@ -212,7 +212,10 @@ function embaralharPerguntas() {
 
     // Coloca a pergunta guardada na posição aleatória
     perguntas[indiceAleatorio] = temp;
+
+     debugger;
   }
+
 }
 
 // Embaralhar as alternativas
@@ -390,7 +393,7 @@ function finalizarQuiz() {
   //Exibe os resultados do quiz na tela
 
   resultado_quiz.innerHTML =
-    "<h2>Resultado</h2>" +
+    "<h2 style = 'color:white;'>Resultado</h2>" +
     "<p>Você acertou " +
     acertos +
     " de " +
@@ -436,11 +439,11 @@ function finalizarQuiz() {
     .then(function (resposta) {
       return resposta.json();
     })
-    //2 segundo e vai direcionar para a dashboard
+    //5 segundo e vai direcionar para a dashboard
     .then(function () {
       setTimeout(function () {
         window.location = "./dashboard.html";
-      }, 2000);
+      },5000);
     })
     //Exibe erros caso aconteça algum problema na req
     .catch(function (erro) {
